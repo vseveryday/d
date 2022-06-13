@@ -1,0 +1,231 @@
+*, 
+*::after, 
+*::before {
+    box-sizing: border-box;
+}
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+.body {
+    font-family: Roboto, sans-serif;
+    font-weight: normal;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    width: 100%;
+    min-width: 768px;
+    height: 100%;
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-size: 14px;
+    letter-spacing: .05em;
+    margin: 0;
+}
+body {
+    font-family: Roboto, sans-serif;
+    font-weight: normal;
+}
+h1, h2, h3 {
+    font-family: Lato, serif;
+    font-weight: normal;
+}
+body.-color-scheme {
+    --color-button-outline: var(--color-header);
+}
+a {
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+a, a:hover {
+    color: var(--color-text);
+    text-decoration: none;
+}
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.page-header {
+    padding: 50px 0;
+}
+img {
+    height: auto;
+    border-style: none;
+}
+img, object, embed {
+    max-width: 100%;
+}
+.logo .logo-link {
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+}
+.logo {
+    text-align: center;
+    line-height: 0;
+}
+.menu {
+    position: sticky;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    list-style-type: disc;
+}
+ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+.menu-list {
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    font-size: 12px 
+}
+.menu-list>.menu-item {
+    margin: 0 20px;
+    padding: 8px 0;
+    position: relative;
+    line-height: 1;
+    text-align: center;
+}
+.menu-list .menu-item>.link {
+    position: relative;
+    width: auto;
+    height: auto;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: var(--color-menu-text);
+    font-weight: inherit;
+    letter-spacing: .15em;
+    text-align: left;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+    cursor: pointer;
+}
+.menu-list .menu-item>.link::after {
+    content: "";
+    display: block;
+    visibility: hidden;
+    position: absolute;
+    right: 0;
+    bottom: -2px;
+    left: 0;
+    height: 1px;
+    transform: scaleX(0) translate(0, 0);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    background-color: var(--color-menu-text);
+}
+.menu-list>.menu-item.-parent {
+    cursor: pointer;
+}
+.menu-list>.menu-item.-parent::after {
+    content: "\f107";
+    display: inline-block;
+    position: relative;
+    padding-left: 0.3em;
+    background: none !important;
+    color: var(--color-menu-text);
+    /* font-family: "Font Awesome 5 Pro"; */
+    font-weight: inherit;
+    line-height: 0;
+}
+.menu-list>.menu-item.-parent .submenu {
+    left: -20px;
+    padding-top: 8px;
+    transform: translateY(-15px);
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+    pointer-events: none;
+}
+.menu-list>.menu-item::before {
+    position: absolute;
+    right: -20px;
+    transform: translateX(50%);
+    color: var(--color-menu-separator);
+    font-family: Arial, sans-serif;
+}
+ul ul {
+    list-style-type: circle;
+}
+.menu-list .submenu {
+    visibility: hidden;
+    position: absolute;
+    z-index: 400;
+    top: 100%;
+    left: 0;
+    min-width: calc(100% + 40px);
+    padding-top: 16px;
+    transition: opacity 0.3s, visibility 0s 0.3s;
+    opacity: 0;
+}
+.menu-list .submenu .submenu-list {
+    position: relative;
+    margin: 0 calc((40px / 2) - 24px);
+    border-radius: 8px;
+    background: var(--color-menu-bg);
+    box-shadow: 0 5px 20px rgb(0 0 0 / 15%);
+    text-align: left;
+}
+.menu-list .submenu .submenu-list>.menu-item {
+    padding: 8px 24px;
+    white-space: nowrap;
+}
+
+
+
+
+
+
+.avatar {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    border-style: none;
+}
+.about {
+    margin: 20px;
+}
+.about-avatar {
+    width: 400px;
+}
+.profile {
+    text-align: center;
+}
+.portfolio img {
+    width: 300px;
+    
+}
+.telegram-link {
+    text-align: center;
+    align-items: center;
+    position: absolute;
+    float: right;
+    right: 0;
+    margin-bottom: 100px;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(255, 255, 255);
+    z-index: 2;
+    border-radius: 20px;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+
